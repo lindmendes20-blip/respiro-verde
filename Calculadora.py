@@ -23,7 +23,7 @@ with st.form(key='form_plantas'):
             st.error("Por favor, preencha todos os campos corretamente.")
         else:
             st.success (f"Obrigada, {nome}! Suas informações foram recebidas com sucesso. Agora, vamos descobrir quais plantas são as melhores para seu jardim!")
-            if horas_sol > 6 and tamanho_jardim >= 100:
+            if horas_sol > 6 and tamanho_jardim >= 10:
                 st.write ("Para seu jardim com mais de 6 horas de sol por dia, algumas plantas que você pode considerar são plantas frutíferas e alguns vegetais como:")
                 st.markdown (" • Limão")
                 st.markdown (" • Acerola")
@@ -33,34 +33,34 @@ with st.form(key='form_plantas'):
                 st.markdown (" • Quiabo")
                 st.markdown (" • Maxixe")
                 st.write ("Vale lembrar que todos esses vegetais podem ser cultivados em vasos, precisando apenas tomar cuidado com a profundidade do mesmo")
-            elif horas_sol <= 6 and tamanho_jardim >= 100:
-                st.write ("Para seu jardim com pelo menos 6 horas de sol por dia, algumas plantas que você pode considerar são plantas frutíferas e alguns vegetais como:")
+            elif horas_sol >= 4 and tamanho_jardim >= 10:
+                st.write ("Para seu jardim com menos de 6 horas de sol por dia, algumas plantas que você pode considerar são plantas frutíferas e alguns vegetais como:")
                 st.markdown (" • Jabuticaba")
                 st.markdown (" • Acerola")
                 st.markdown (" • Tomate")
                 st.markdown (" • Cenoura")
                 st.markdown (" • Couve-flor")
                 st.write ("Vale lembrar que todos esses vegetais podem ser cultivados em vasos, precisando apenas tomar cuidado com a profundidade do mesmo")
-            elif horas_sol <= 4 and tamanho_jardim >= 100:
-                st.write ("Para seu jardim com pelo menos 4 horas de sol por dia, algumas plantas que você pode considerar são plantas frutíferas e alguns vegetais, como:")
+            elif horas_sol < 4 and tamanho_jardim >= 10:
+                st.write ("Para seu jardim com menos de 4 horas de sol por dia, algumas plantas que você pode considerar são plantas frutíferas e alguns vegetais, como:")
                 st.markdown (" • Morango")
                 st.markdown (" • Amora")
                 st.markdown (" • Tomate")
                 st.markdown (" • Aspargo")
                 st.write ("Vale lembrar que todos esses vegetais podem ser cultivados em vasos, precisando apenas tomar cuidado com a profundidade do mesmo")
-            elif horas_sol > 6 and tamanho_jardim < 100:
+            elif horas_sol > 6 and tamanho_jardim < 10:
                 st.write ("Para seu jardim com mais de 6 horas de sol por dia, algumas plantas que você pode considerar são:")
                 st.markdown (" • Cebolinha")
                 st.markdown (" • Coentro")
                 st.markdown (" • Acelga")
                 st.markdown (" • Agrião")
-            elif horas_sol <= 6 and tamanho_jardim < 100:
+            elif horas_sol >= 4 and tamanho_jardim < 10:
                 st.write ("Para seu jardim com menos de 6 horas de sol por dia, algumas plantas que você pode considerar são:")
                 st.markdown (" • Cenoura")
                 st.markdown (" • Alho")
                 st.markdown (" • Aspargos")
-            elif horas_sol <= 4 and tamanho_jardim < 100:
-                st.write ("Para seu jardim com pelo menos 4 horas de sol por dia, algumas plantas que você pode considerar são:")
+            elif horas_sol <= 4 and tamanho_jardim < 10:
+                st.write ("Para seu jardim com menos 4 horas de sol por dia, algumas plantas que você pode considerar são:")
                 st.markdown (" • Salsa")
                 st.markdown (" • Couve-flor")
                 st.markdown (" • Alface")
